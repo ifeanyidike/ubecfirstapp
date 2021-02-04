@@ -25,5 +25,6 @@ export const device = {
 export const colors = {
     headerBorder: '#ddd',
     white: '#fff',
-    black: '#000'
+    black: '#000',
+    goldish: '#FFC400',
 }

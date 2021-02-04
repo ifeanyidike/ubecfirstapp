@@ -1,14 +1,28 @@
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
+import { colors } from "../utils/definitions"
 import { CarouselContainer } from '../styles/CarouselStyles';
 
 const slider = () => (
-    <CarouselContainer>
-        <AwesomeSlider>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
+    <CarouselContainer >
+        <AwesomeSlider bullets={false} >
+            <div className='carousel__content first'>
+
+                <div className="carousel__text">
+                    <h3>Ministers Goodwill Message</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto esse, minima, exercitationem, explicabo ratione dolorem suscipit corporis sit pariatur perspiciatis!</p>
+                    <p>Distinctio deserunt earum nostrum magni ab laboriosam placeat ullam!</p>
+                </div>
+
+            </div>
+            <div className='carousel__content second'>
+
+                <div className="carousel__text">
+                    <h3>ES Goodwill Message</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto esse, minima, exercitationem, explicabo ratione dolorem suscipit corporis sit pariatur perspiciatis!</p>
+                    <p>Distinctio deserunt earum nostrum magni ab laboriosam placeat ullam!</p>
+                </div>
+            </div>
         </AwesomeSlider>
     </CarouselContainer>
 );

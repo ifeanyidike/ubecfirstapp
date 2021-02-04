@@ -6,32 +6,86 @@ const Header = () => {
     return (
         <HeaderContainer>
             <div className='header__left'>
-                <div className='label'>
+                <div className='label menuitem'>
                     <Link>Thinkfix</Link>
                 </div>
-                <div>
+                <div className='menuitem'>
                     <Link>Features</Link>
                 </div>
-                <div>
-                    <Link>customers</Link>
+                <div className='megamenu menuitem'>
+                    <Link>Directors</Link>
+                    <div className="megamenuitem">
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+                        <div>
+                            <img src="/images/avatar.png" alt="director" />
+                            <span>Ahmed Bobboyi</span>
+                            <span>Director of Academics</span>
+                        </div>
+
+                    </div>
                 </div>
-                <div>
-                    <Link>pricing</Link>
+                <div className='menuitem'>
+                    <Link>Projects</Link>
                 </div>
-                <div>
-                    <Link>about us</Link>
+                <div className='menuitem'>
+                    <Link>About</Link>
                 </div>
-                <div>
-                    <Link>Plus</Link>
-                </div>
+
             </div>
             <div className='header__right'>
-                <div>
+                <div className='menuitem'>
                     <Link>sign in</Link>
                 </div>
-                <div>
-                    <Link className='header__rightEnd'>Get started free</Link>
-                </div>
+
             </div>
 
         </HeaderContainer>
