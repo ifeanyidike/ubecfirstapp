@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { device, colors } from "../utils/definitions"
 
 export const CarouselContainer = styled.div`
-    padding-top: 70px;
     .awssld{
         --slider-height-percentage: 40%;
     }

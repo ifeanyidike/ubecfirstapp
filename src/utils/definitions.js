@@ -22,9 +22,20 @@ export const device = {
     desktopL: `(max-width: ${size.desktop})`
 };
 
+export const defaultMargin = '70px'
+
 export const colors = {
     headerBorder: '#ddd',
     white: '#fff',
     black: '#000',
     goldish: '#FFC400',
+    darkblue: '#172B4D',
+    ash: '#F4F5F7',
+    sweetRed: '#bb1e1e',
+    sweetBlue: '#1e11bb',
+    lightBrown: '#ddb777',
+    dye: ' #00416A',
+    orange: '#f6d2ba',
+    orchid: '#DA70D6',
+    gold: '#FFAA00'
 }

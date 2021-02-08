@@ -1,19 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { HeaderContainer } from "../styles/HeaderStyles"
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../redux/actions/userActions'
+import { useHistory } from 'react-router-dom'
 
 const Header = () => {
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const { userInfo } = useSelector(state => state.userLogin)
+    console.log(userInfo)
+
+    const logoutHandler = () => {
+        dispatch(logout())
+        history.push('/')
+    }
     return (
         <HeaderContainer>
             <div className='header__left'>
                 <div className='label menuitem'>
-                    <Link>Thinkfix</Link>
+                    <Link to='/'>Ubec</Link>
                 </div>
                 <div className='menuitem'>
-                    <Link>Features</Link>
+                    <Link to='/'>Features</Link>
                 </div>
                 <div className='megamenu menuitem'>
-                    <Link>Directors</Link>
+                    <Link to='/'>Directors</Link>
                     <div className="megamenuitem">
                         <div>
                             <img src="/images/avatar.png" alt="director" />
@@ -74,16 +86,20 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='menuitem'>
-                    <Link>Projects</Link>
+                    <Link to='/mainarea'>Options</Link>
                 </div>
                 <div className='menuitem'>
-                    <Link>About</Link>
+                    <Link to='/'>About</Link>
                 </div>
 
             </div>
             <div className='header__right'>
                 <div className='menuitem'>
-                    <Link>sign in</Link>
+                    {
+                        userInfo ? <Link onClick={logoutHandler}>Log out</Link>
+                            :
+                            <Link to='/signin'>sign in</Link>
+                    }
                 </div>
 
             </div>

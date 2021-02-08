@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { device, colors } from '../utils/definitions'
+import { device, colors, defaultMargin } from '../utils/definitions'
 
 
 export const HeaderContainer = styled.nav`
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: ${defaultMargin};
     border-bottom: 1px solid ${colors.headerBorder};
     background-color: ${colors.white};
     position: fixed;
@@ -53,6 +53,7 @@ export const HeaderContainer = styled.nav`
                 flex-wrap: nowrap;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
+                box-shadow: 0 1px 1px 1px rgba(255, 215, 20, 0.2), 0 0 1px 1px rgba(255, 215, 20, 0.2);
                 
                 div{
                     display: flex;
