@@ -37,5 +37,6 @@ export const colors = {
     dye: ' #00416A',
     orange: '#f6d2ba',
     orchid: '#DA70D6',
-    gold: '#FFAA00'
+    gold: '#FFAA00',
+    lime: '#00FF00'
 }

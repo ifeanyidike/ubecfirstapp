@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NameSubjectContainer, ScorePageContainer } from '../styles/TestSubjectStyles'
 import { subjects } from "../utils/authjson"
 import { useSelector } from 'react-redux'
@@ -17,10 +17,20 @@ const ScorePage = () => {
     const { result } = useSelector(state => state.resultSet)
     const { result: correctResults } = useSelector(state => state.correctResultSet)
 
+    useEffect(() => {
+        if (!userInfo) {
+            history.push('/')
+        }
+        if (!result) {
+            history.push('/mainarea')
+        }
+    }, [userInfo, result, history, correctResults])
+
     const currentSubject = subjects.find(subject => subject._id === parseInt(subjectId))
 
     return (
-        <ScorePageContainer scoreColor={correctResults.length < result.length / 2 ? colors.sweetRed : colors.darkblue}>
+        <ScorePageContainer scoreColor={
+            result && correctResults && (correctResults.length < result.length / 2) ? colors.sweetRed : colors.darkblue}>
             <NameSubjectContainer>
                 <span className='subject'>{currentSubject && currentSubject.name}</span>
                 <span className='student'>{userInfo.name}</span>
